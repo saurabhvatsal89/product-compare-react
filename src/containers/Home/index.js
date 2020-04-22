@@ -25,7 +25,7 @@ class Home extends Component {
         {compareProducts.length >= 2 &&
           <Compare products={compareProducts} />
         }
-        <MessengerCustomerChat
+        MessengerCustomerChat: <MessengerCustomerChat
           pageId="<YOUR_PAGE_ID>"
           appId="<YOUR_APP_ID>"
         />
