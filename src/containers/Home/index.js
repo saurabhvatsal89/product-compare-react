@@ -26,8 +26,8 @@ class Home extends Component {
           <Compare products={compareProducts} />
         }
         MessengerCustomerChat: <MessengerCustomerChat
-          pageId="<YOUR_PAGE_ID>"
-          appId="<YOUR_APP_ID>"
+          pageId="101453124885495"
+          appId="161596415208426"
         />
 
       </div>
