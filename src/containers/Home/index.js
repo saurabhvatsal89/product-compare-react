@@ -1,8 +1,9 @@
-import React, {Component} from 'react'
-import {bindActionCreators} from 'redux'
-import {Compare, ProductList} from '../../components'
+import React, { Component } from 'react'
+import { bindActionCreators } from 'redux'
+import { Compare, ProductList } from '../../components'
 import * as productActions from '../../actions/product'
-import {connect} from 'react-redux'
+import { connect } from 'react-redux'
+import MessengerCustomerChat from 'react-messenger-customer-chat';
 
 class Home extends Component {
   componentWillMount() {
@@ -10,7 +11,7 @@ class Home extends Component {
   }
 
   render() {
-    const {products, actions} = this.props;
+    const { products, actions } = this.props;
     const compareProducts = products.filter(product => product.compare);
 
     return (
@@ -20,10 +21,15 @@ class Home extends Component {
             <h2 className="mb-3">Compare Products</h2>
           </div>
         </div>
-        <ProductList products={products} compare={actions.compare}/>
+        <ProductList products={products} compare={actions.compare} />
         {compareProducts.length >= 2 &&
-          <Compare products={compareProducts}/>
+          <Compare products={compareProducts} />
         }
+        <MessengerCustomerChat
+          pageId="<YOUR_PAGE_ID>"
+          appId="<YOUR_APP_ID>"
+        />
+
       </div>
     )
   }
